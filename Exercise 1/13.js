@@ -19,3 +19,13 @@ else {
 number");
 }
  */
+const readline = require('readline-sync');
+rl=readline.question("Enter space-separated values: ").split(" ");
+let sum=0;
+for(let i=0;i<rl.length;i++){
+    n=parseInt(rl[i]);
+    if(!isNaN(n)){
+        sum+=n;
+    }
+}
+console.log("The average of the numbers is "+sum/rl.length);
